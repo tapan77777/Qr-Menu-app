@@ -1,0 +1,198 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+
+/* Admin button styling */
+.admin-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #800000;
+    color: #fff;
+    border: none;
+    padding: 8px 12px; /* Reduced padding for smaller size */
+    border-radius: 5px;
+    font-size: 0.9rem; /* Slightly smaller font */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+.admin-button:hover {
+    background-color: #a20000;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .admin-button {
+        font-size: 0.8rem;
+        padding: 6px 10px; /* Further reduced size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-button {
+        font-size: 0.7rem;
+        padding: 5px 8px;
+        top: 5px; /* Adjust position for very small screens */
+        right: 5px;
+    }
+}
+
+
+/* Container for the homepage */
+.homepage-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Filter buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #6c757d;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-button.active {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.filter-button:hover {
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Grid layout for menu items */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ensure even-sized cards */
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Card styling for MenuItemCard */
+.menu-item-card {
+    background-color: #fff; /* Default white background */
+    border: 2px solid #800000; /* Maroon border line */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    height: 280px; /* Fixed height for even size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dynamic color backgrounds for variety */
+.menu-item-card:nth-child(odd) {
+    background-color: #fce4ec; /* Light pink */
+}
+
+.menu-item-card:nth-child(even) {
+    background-color: #e8f5e9; /* Light green */
+}
+
+.menu-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%; /* Round image */
+    border: 2px solid #800000; /* Maroon border for images */
+    margin: 10px auto;
+}
+
+.menu-item-card h2 {
+    font-size: 1.1rem;
+    color: #495057;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+.menu-item-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 5px 0;
+}
+
+/* Center content vertically */
+.menu-item-card p:last-child {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #800000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .filter-buttons {
+        gap: 8px;
+    }
+
+    .filter-button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .menu-item-card {
+        height: 260px; /* Slightly reduced height for smaller screens */
+        padding: 10px;
+    }
+
+    .filter-button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}

@@ -1,0 +1,281 @@
+/* AdminPage.css */
+/* Back Arrow Button Styling */
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  color: #800000;
+  border: 2px solid #800000;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #800000;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .back-button {
+    font-size: 1rem;
+    padding: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    font-size: 0.9rem;
+    padding: 3px;
+  }
+}
+
+
+/* Main Page Heading */
+h1 {
+  font-size: 32px;
+  color: #ab3232; /* Maroon color */
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ab3232; /* Underline */
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Subheading for Sections */
+h2 {
+  font-size: 24px;
+  color: #ab3232;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  padding-left: 5px;
+  border-left: 4px solid #ab3232; /* Vertical line for emphasis */
+  text-transform: capitalize;
+}
+
+
+/* Container for Items */
+.item-container {
+  border: 1px solid #ab3232; /* Maroon border */
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 250px;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Lifted shadow on hover */
+}
+
+/* Item Image */
+.item-container img {
+  width: 100%;
+  max-width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 10px;
+  border: 2px solid #ab3232;
+}
+
+/* Item Details */
+.item-container h3 {
+  font-size: 18px;
+  color: #ab3232;
+  margin-bottom: 5px;
+}
+
+.item-container p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Buttons */
+.item-container button {
+  padding: 8px 12px;
+  background-color: #ab3232; /* Maroon background */
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.item-container button:hover {
+  background-color: #800000; /* Darker maroon on hover */
+}
+
+/* Responsive Grid Layout */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .item-grid {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+}
+
+  /* Edite form */
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f8f8f8; /* Light background for the form */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 100%; /* Ensure full width usage */
+    margin: 0 auto; /* Center align */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    overflow: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .edit-form input,
+  .edit-form select,
+  .edit-form textarea {
+    padding: 2px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%; /* Ensure inputs take full width */
+  }
+  
+  .edit-form input:focus,
+  .edit-form select:focus,
+  .edit-form textarea:focus {
+    border-color: maroon; /* Maroon border on focus */
+    outline: none;
+    box-shadow: 0 0 5px maroon; /* Maroon glow */
+  }
+  
+  .edit-form button {
+    padding: 10px 20px;
+    background-color: maroon; /* Maroon background */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-form button:hover {
+    background-color: #800000; /* Darker maroon on hover */
+  }
+  
+  .buttons-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .edit-form {
+      padding: 15px; /* Slightly reduced padding for smaller screens */
+      max-width: 100%; /* Allow the form to use full width on mobile */
+      margin: 10px; /* Add some margin around the form */
+    }
+  
+    .edit-form input,
+    .edit-form select,
+    .edit-form textarea {
+      font-size: 14px; /* Smaller font size on smaller screens */
+    }
+  
+    .edit-form button {
+      font-size: 14px; /* Smaller button font size */
+      padding: 8px 16px; /* Smaller button padding */
+    }
+  
+    .buttons-container {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .edit-form {
+      padding: 10px; /* Further reduce padding on very small screens */
+    }
+  
+    .edit-form input,
+    .edit-form select,
+    .edit-form textarea {
+      font-size: 12px; /* Even smaller font size on very small screens */
+    }
+  
+    .edit-form button {
+      font-size: 12px; /* Smaller button font size */
+      padding: 6px 12px; /* Even smaller button padding */
+    }
+  }
+  
+  /*  */
+  .buttons-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .edit-form {
+      padding: 15px; /* Slightly reduced padding for smaller screens */
+      max-width: 100%; /* Allow the form to use full width on mobile */
+    }
+  
+    .edit-form input,
+    .edit-form select,
+    .edit-form textarea {
+      font-size: 14px; /* Smaller font size on smaller screens */
+    }
+  
+    .edit-form button {
+      font-size: 14px; /* Smaller button font size */
+      padding: 8px 16px; /* Smaller button padding */
+    }
+  
+    .buttons-container {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 10px;
+    }
+  }
+  
+  /*  */
+  .buttons-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .add-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,65 @@
+/* General card styling */
+.menu-item-card {
+    border: 2px solid #800000; /* Maroon border line */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    height: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Vegetarian items - slight green */
+.menu-item-card.veg {
+    background-color: #e8f5e9; /* Light green */
+}
+
+/* Non-vegetarian items - slight red */
+.menu-item-card.non-veg {
+    background-color: #fce4ec; /* Light red */
+}
+
+/* Drinks - light blue */
+.menu-item-card.drinks {
+    background-color: #e3f2fd; /* Light blue */
+}
+
+/* Hover effect */
+.menu-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Rounded image with maroon border */
+.menu-item-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #800000;
+    margin: 10px auto;
+}
+
+.menu-item-card h2 {
+    font-size: 1.1rem;
+    color: #495057;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+.menu-item-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 5px 0;
+}
+
+.menu-item-card p:last-child {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #800000;
+}
