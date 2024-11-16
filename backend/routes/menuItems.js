@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { getAllItems, createItem, updateItem, deleteItem } = require('../controllers/menuItemsController');
-const upload = require('../config/multerConfig');  // Import the multer config
+const upload = require('../config/multerconfig');  // Import the multer config
 const validateRequestTime = require('../middleware/timeValidationMiddleware');  // Import the time validation middleware
 
 // Get all menu item
