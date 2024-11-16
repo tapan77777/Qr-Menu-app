@@ -4,7 +4,7 @@ const { getAllItems, createItem, updateItem, deleteItem } = require('../controll
 const upload = require('../config/multerConfig');  // Import the multer config
 const validateRequestTime = require('../middleware/timeValidationMiddleware');  // Import the time validation middleware
 
-// Get all menu items
+// Get all menu item
 router.get('/', getAllItems);  // Make sure 'getAllItems' is a valid function
 
 // Create a new menu item with an image upload and time validation
