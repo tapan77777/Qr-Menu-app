@@ -15,10 +15,12 @@ const AdminPage = () => {
     image: null,
   });
 
+  const API_BASE_URL = 'https://qr-menu-app-1.onrender.com'; // Base URL for deployed backend
+
   useEffect(() => {
     // Fetch all menu items when the component mounts
     axios
-      .get('http://localhost:5000/api/menu-items')
+      .get(`${API_BASE_URL}/api/menu-items`)
       .then((response) => setMenuItems(response.data))
       .catch((error) => console.log(error));
   }, []);
@@ -50,7 +52,7 @@ const AdminPage = () => {
   // Handle Delete Item
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/api/menu-items/${id}`)
+      .delete(`${API_BASE_URL}/api/menu-items/${id}`)
       .then(() => {
         setMenuItems(menuItems.filter((item) => item._id !== id));
       })
@@ -72,7 +74,7 @@ const AdminPage = () => {
     }
 
     axios
-      .post('http://localhost:5000/api/menu-items', newItem)
+      .post(`${API_BASE_URL}/api/menu-items`, newItem)
       .then((response) => {
         setMenuItems([...menuItems, response.data]);
         setFormData({
@@ -111,7 +113,7 @@ const AdminPage = () => {
     }
 
     axios
-      .put(`http://localhost:5000/api/menu-items/${editingItem}`, updatedItem)
+      .put(`${API_BASE_URL}/api/menu-items/${editingItem}`, updatedItem)
       .then((response) => {
         setMenuItems(
           menuItems.map((item) =>

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:5000',  // Base URL from the environment variable
+    baseURL: 'https://qr-menu-app-1.onrender.com',  // Updated Base URL for the deployed backend
 });
 
 export default api;

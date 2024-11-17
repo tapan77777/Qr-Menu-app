@@ -14,7 +14,7 @@ const HomePage = () => {
         // Fetch menu items from the backend
         const fetchMenuItems = async () => {
             try {
-                const response = await api.get('http://localhost:5000/api/menu-items');
+                const response = await api.get('/api/menu-items'); // Use relative path with baseURL from api.js
                 setMenuItems(response.data);
                 setFilteredItems(response.data); // Default to show all items
             } catch (error) {
