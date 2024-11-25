@@ -39,7 +39,7 @@ const HomePage = () => {
         <div className="homepage-container">
             <button
                 className="admin-button"
-                onClick={() => navigate('/admin')} // Navigate to the admin panel
+                onClick={() => navigate('/login')} // Navigate to the login panel
             >
                 Admin Panel
             </button>

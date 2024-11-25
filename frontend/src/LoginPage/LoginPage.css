@@ -1,0 +1,76 @@
+
+  /* Container */
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  /* Form Styling */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .login-form h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .error-msg {
+    text-align: center;
+    color: red;
+    font-size: 0.9rem;
+  }
+  
+  /* Input Styling */
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login-form input[type="text"]:focus,
+  .login-form input[type="password"]:focus {
+    border-color: #6a11cb;
+  }
+  
+  /* Button Styling */
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background: #6a11cb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background: #2575fc;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 15px;
+    }
+  
+    .login-form h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
